@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Profile  from './profile/profile.js'
 
 function App() {
+
+  function handleName(fullname){
+    alert('full name :'+ fullname );
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Profile fullName="Amine Medjdoub"
+     bio="A biography, or simply bio, is a detailed description of a person's life. It involves more than just the basic facts like education, work, relationships, ..."
+     profession="full stack develloper"
+     handleName = {handleName}>
+      <img style={{width:100,height:100,borderRadius:"50%"}} src="./myimage.jpeg"  />
+    </Profile>
   );
 }
 
